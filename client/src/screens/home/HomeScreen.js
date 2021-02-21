@@ -17,6 +17,8 @@ const HomeScreen = () => {
       <Link to='/register'>
         <h2>Register</h2>
       </Link>
+
+      <p>This is the home screen</p>
     </section>
   );
 };
