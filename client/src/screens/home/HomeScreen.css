@@ -1,0 +1,16 @@
+/* Global */
+:root {
+  --primary-color: #350b40;
+  --secondary-color: #1a508b;
+  --background-color: #f6f6f6;
+  --success-color: #61b15a;
+  --error-color: #ef4f4f;
+  --disabled-color: #cfd3ce;
+}
+
+#main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

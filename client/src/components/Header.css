@@ -1,0 +1,50 @@
+/* Global */
+:root {
+  --primary-color: #350b40;
+  --secondary-color: #1a508b;
+  --background-color: #f6f6f6;
+  --success-color: #61b15a;
+  --error-color: #ef4f4f;
+  --disabled-color: #cfd3ce;
+}
+
+#main-navbar {
+  width: 100vw;
+  background-color: var(--primary-color);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar-items {
+  display: block;
+}
+
+#navbar-items .navbar-item {
+  list-style-type: none;
+  color: #fff;
+  font-size: 1.3rem;
+  text-align: center;
+  padding: 20px 5vw;
+  margin: 0;
+  border-bottom: 1px dotted #fff;
+}
+
+#navbar-items .navbar-item:last-child {
+  border-bottom: 0;
+}
+
+#navbar-items .navbar-item a {
+  text-decoration: none;
+  color: var(--background-color);
+}
+
+@media (min-width: 700px) {
+  #main-navbar {
+  }
+
+  #navbar-items {
+  }
+}
