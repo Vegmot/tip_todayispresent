@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+  // opens/closes menu with hamburger button
   const toggleHandler = e => {
     e.preventDefault();
     const navMenu = document.getElementById('navbar-items');
@@ -21,6 +22,21 @@ const Header = () => {
     }
   };
 
+  // closes mobile look menu bar when clicking any item
+  const tapToCloseMenuHandler = e => {
+    e.preventDefault();
+    const navMenu = document.getElementById('navbar-items');
+    const toggleIcon = document.getElementById('toggle');
+
+    if (navMenu && navMenu.classList.contains('showActiveMenu')) {
+      navMenu.classList.remove('showActiveMenu');
+      toggleIcon.style.color = '#350b40';
+      toggleIcon.innerHTML = "<i class='fa fa-bars fa-2x' />";
+    } else {
+      return;
+    }
+  };
+
   return (
     <>
       <header id='main-header'>
@@ -30,19 +46,35 @@ const Header = () => {
           </span>
 
           <ul id='navbar-items' className='navbar-items'>
-            <li id='navbar-item' className='navbar-item'>
+            <li
+              id='navbar-item'
+              className='navbar-item'
+              onClick={e => tapToCloseMenuHandler(e)}
+            >
               <Link to='/'>Home</Link>
             </li>
 
-            <li id='navbar-item' className='navbar-item'>
+            <li
+              id='navbar-item'
+              className='navbar-item'
+              onClick={e => tapToCloseMenuHandler(e)}
+            >
               <Link to='/presents'>Presents</Link>
             </li>
 
-            <li id='navbar-item' className='navbar-item'>
+            <li
+              id='navbar-item'
+              className='navbar-item'
+              onClick={e => tapToCloseMenuHandler(e)}
+            >
               <Link to='/about'>About</Link>
             </li>
 
-            <li id='navbar-item' className='navbar-item'>
+            <li
+              id='navbar-item'
+              className='navbar-item'
+              onClick={e => tapToCloseMenuHandler(e)}
+            >
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
