@@ -11,6 +11,7 @@ const GFeedScreen = () => {
       );
       setPosts(res.data.data);
       console.log(res.data);
+      console.log(res.data.data);
     };
     fetchPosts();
   }, []);
@@ -22,7 +23,14 @@ const GFeedScreen = () => {
 
         <section>
           {posts.map(post => (
-            <div key={post.id} style={{ border: '1px solid #000' }}>
+            <div
+              key={post.id}
+              style={{
+                border: '1px solid #000',
+                margin: '5px',
+                padding: '5px',
+              }}
+            >
               <img
                 src={post.main_image}
                 alt={post.to}
@@ -36,13 +44,22 @@ const GFeedScreen = () => {
                   style={{ width: '20px' }}
                 />
 
-                <h3 style={{ display: 'inline' }}>
-                  {post.from} sent a Gesture to {post.to}
-                </h3>
+                <h5
+                  style={{
+                    display: 'inline',
+                    marginLeft: '5px',
+                    paddingTop: '2px',
+                  }}
+                >
+                  {post.from} ({post.owner_id}) sent a Gesture to {post.to}
+                </h5>
               </div>
 
-              <h3>{post.message}</h3>
-              <small>{post.createdAt}</small>
+              <p>{post.message}</p>
+              <small style={{ display: 'block' }}>
+                Posted on {post.createdAt}
+              </small>
+              <small style={{ display: 'block' }}>Post ID: {post.id}</small>
             </div>
           ))}
         </section>

@@ -32,7 +32,7 @@
 
 .navbar-items {
   display: none;
-  animation: 0.5s ease-in;
+  animation-name: menuBarOpen;
 }
 
 #navbar-items.showActiveMenu {
@@ -83,5 +83,17 @@
 
   #navbar-item.navbar-item {
     border: 0;
+  }
+}
+
+@keyframes menuBarOpen {
+  from {
+    display: block;
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+
+  to {
+    opacity: 1;
   }
 }
