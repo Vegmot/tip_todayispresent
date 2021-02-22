@@ -8,6 +8,10 @@ const Header = () => {
     <>
       <header id='main-header'>
         <nav id='main-navbar' className='main-navbar'>
+          <span id='toggle' className='toggle'>
+            <i className='fa fa-bars hamburger fa-2x'></i>
+          </span>
+
           <ul id='navbar-items' className='navbar-items'>
             <li id='navbar-item' className='navbar-item'>
               <Link to='/'>Home</Link>
