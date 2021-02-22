@@ -32,9 +32,10 @@
 
 .navbar-items {
   display: none;
+  animation: 0.5s ease-in;
 }
 
-.navbar-items.showActiveMenu {
+#navbar-items.showActiveMenu {
   display: block;
 }
 
@@ -62,7 +63,12 @@
   color: var(--background-color);
 }
 
+/* Media - tablet, laptop or desktop monitor screen */
 @media (min-width: 800px) {
+  #toggle {
+    display: none;
+  }
+
   #main-navbar {
     display: block;
   }

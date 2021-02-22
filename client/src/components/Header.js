@@ -13,9 +13,11 @@ const Header = () => {
     if (navMenu && !navMenu.classList.contains('showActiveMenu')) {
       navMenu.classList.add('showActiveMenu');
       toggleIcon.style.color = '#f6f6f6';
+      toggleIcon.innerHTML = "<i class='fas fa-times fa-2x' />";
     } else {
       navMenu.classList.remove('showActiveMenu');
       toggleIcon.style.color = '#350b40';
+      toggleIcon.innerHTML = "<i class='fa fa-bars fa-2x' />";
     }
   };
 
@@ -24,7 +26,7 @@ const Header = () => {
       <header id='main-header'>
         <nav id='main-navbar' className='main-navbar'>
           <span id='toggle' className='toggle' onClick={e => toggleHandler(e)}>
-            <i className='fa fa-bars hamburger fa-2x'></i>
+            <i className='fa fa-bars fa-2x'></i>
           </span>
 
           <ul id='navbar-items' className='navbar-items'>
