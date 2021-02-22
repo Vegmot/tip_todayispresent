@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const GFeed = () => {
+const GFeedScreen = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -51,4 +51,4 @@ const GFeed = () => {
   );
 };
 
-export default GFeed;
+export default GFeedScreen;

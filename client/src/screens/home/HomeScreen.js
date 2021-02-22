@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './HomeScreen.style';
-import GFeed from './GFeed';
 
 import './HomeScreen.css';
 
@@ -22,8 +21,6 @@ const HomeScreen = () => {
 
         <p>This is the home screen</p>
       </section>
-
-      <GFeed />
     </>
   );
 };
