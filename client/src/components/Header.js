@@ -4,11 +4,26 @@ import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
+  const toggleHandler = e => {
+    e.preventDefault();
+    const navMenu = document.getElementById('navbar-items');
+    const toggleIcon = document.getElementById('toggle');
+
+    // check if navMenu !== null or I'll have to double click this to open/close
+    if (navMenu && !navMenu.classList.contains('showActiveMenu')) {
+      navMenu.classList.add('showActiveMenu');
+      toggleIcon.style.color = '#f6f6f6';
+    } else {
+      navMenu.classList.remove('showActiveMenu');
+      toggleIcon.style.color = '#350b40';
+    }
+  };
+
   return (
     <>
       <header id='main-header'>
         <nav id='main-navbar' className='main-navbar'>
-          <span id='toggle' className='toggle'>
+          <span id='toggle' className='toggle' onClick={e => toggleHandler(e)}>
             <i className='fa fa-bars hamburger fa-2x'></i>
           </span>
 
