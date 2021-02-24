@@ -14,9 +14,9 @@ const ContactScreen = () => {
 
   return (
     <>
-      <Row id='contact-form-left' className='contact-form-left text-center'>
-        <Col md={6} className=''>
-          <div className='contact-form-present mb-3'>
+      <Row id='contact-form' className='contact-form text-center mt-5'>
+        <Col md={5} className='contact-form-left'>
+          <div className='contact-form-present mt-4'>
             <h4>Present</h4>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
@@ -25,7 +25,7 @@ const ContactScreen = () => {
             <SubmitBtn smaller>Details</SubmitBtn>
           </div>
 
-          <div className='contact-form-account'>
+          <div className='contact-form-account mt-5'>
             <h4>Account</h4>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, autem
@@ -35,7 +35,7 @@ const ContactScreen = () => {
           </div>
         </Col>
 
-        <Col me={6}>
+        <Col md={{ span: 4, offset: 3 }}>
           <Form
             id='contact-form-right'
             className='contact-form-right'

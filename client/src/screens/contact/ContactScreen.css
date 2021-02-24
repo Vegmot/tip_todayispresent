@@ -1,5 +1,10 @@
-#contact-form-left {
+#contact-form {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#contact-form-right {
+  width: 100%;
+  max-width: 300px;
 }

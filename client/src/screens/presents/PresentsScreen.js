@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Spinner } from 'react-bootstrap';
 import { data } from './data';
 
 import './PresentsScreen.css';

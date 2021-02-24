@@ -34,7 +34,6 @@
 
 .navbar-items {
   display: none;
-  animation-name: menuBarOpen;
 }
 
 #navbar-items.showActiveMenu {
@@ -44,9 +43,9 @@
 #navbar-items .navbar-item {
   list-style-type: none;
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: center;
-  padding: 20px 5vw;
+  padding: 10% 4vw;
   margin: 0;
   border-bottom: 1px dotted #fff;
 }
@@ -84,18 +83,64 @@
   }
 
   #navbar-item.navbar-item {
+    padding: 2% 4vw;
     border: 0;
   }
-}
 
-@keyframes menuBarOpen {
-  from {
-    display: block;
-    opacity: 0;
-    transition: opacity 300ms;
+  /* Custom */
+
+  li {
+    display: inline-block;
   }
 
-  to {
-    opacity: 1;
+  a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    padding: 4% 0;
+    text-transform: uppercase;
+    transition: color 0.1s, background-color 0.1s;
+    color: var(--background-color);
+  }
+
+  a:hover {
+    color: var(--background-color);
+  }
+
+  a:focus,
+  a:active {
+    color: var(--background-color);
+  }
+
+  /* white underline when hover and active */
+  a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 120%; /* location from top */
+    height: 3px; /* thickness */
+    width: 100%;
+    background-color: var(--background-color);
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    transition: color 0.1s, -webkit-transform 0.2s ease-out;
+    transition: color 0.1s, transform 0.2s ease-out;
+    transition: color 0.1s, transform 0.2s ease-out,
+      -webkit-transform 0.2s ease-out;
+  }
+  /* white underline when hover and active */
+
+  a:active::before {
+    background-color: var(--primary-color);
+  }
+
+  a:hover::before,
+  a:focus::before {
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
   }
 }
