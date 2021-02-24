@@ -29,6 +29,7 @@
 
 #navbar-items {
   margin: 0;
+  padding: 0;
 }
 
 .navbar-items {
@@ -50,13 +51,13 @@
   border-bottom: 1px dotted #fff;
 }
 
+#navbar-items .navbar-item:last-child {
+  border-bottom: 0;
+}
+
 #navbar-items .navbar-item:hover {
   color: var(--background-color);
   text-shadow: 0 0 10px #fff;
-}
-
-#navbar-items .navbar-item:last-child {
-  border-bottom: 0;
 }
 
 #navbar-items .navbar-item a {

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Card } from 'react-bootstrap';
+import { Card, Button } from 'react-bootstrap';
+
+import './GFeedScreen.css';
 
 const GFeedScreen = () => {
   const [posts, setPosts] = useState([]);
@@ -23,7 +25,7 @@ const GFeedScreen = () => {
         <section>
           {posts.map(post => {
             return (
-              <Card className='text-center'>
+              <Card className='main-card'>
                 <Card.Header className='post-sender'>
                   <img
                     src={post.sub_image}
@@ -44,18 +46,21 @@ const GFeedScreen = () => {
                 <Card.Footer className='post-message'>
                   <p className='post-text'>
                     <span className='post-users'>{post.from}</span> sent a
-                    Gesture to <span className='post-users'>{post.to}!</span>
+                    Gesture to <span className='post-users'>{post.to}:</span>
                   </p>
 
                   <h5>
-                    <i class='far fa-comment'></i> {post.message}
+                    <i class='fas fa-quote-left'></i> {post.message}{' '}
+                    <i class='fas fa-quote-right'></i>
                   </h5>
                   <small>Posted on {post.createdAt}</small>
                 </Card.Footer>
               </Card>
             );
           })}
-          <button className='load-more-btn'>Load More...</button>
+          <Button id='load-more-btn' className='btn load-more-btn'>
+            Load More...
+          </Button>
         </section>
       </div>
     </>
