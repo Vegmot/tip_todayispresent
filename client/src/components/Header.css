@@ -89,11 +89,11 @@
 
   /* Custom */
 
-  li {
+  #navbar-items li {
     display: inline-block;
   }
 
-  a {
+  #navbar-items li a {
     text-decoration: none;
     position: relative;
     display: block;
@@ -103,17 +103,17 @@
     color: var(--background-color);
   }
 
-  a:hover {
+  #navbar-items li a:hover {
     color: var(--background-color);
   }
 
-  a:focus,
-  a:active {
+  #navbar-items li a:focus,
+  #navbar-items li a:active {
     color: var(--background-color);
   }
 
   /* white underline when hover and active */
-  a::before {
+  #navbar-items li a::before {
     content: '';
     display: block;
     position: absolute;
@@ -132,12 +132,12 @@
   }
   /* white underline when hover and active */
 
-  a:active::before {
+  #navbar-items li a:active::before {
     background-color: var(--primary-color);
   }
 
-  a:hover::before,
-  a:focus::before {
+  #navbar-items li a:hover::before,
+  #navbar-items li a:focus::before {
     -webkit-transform-origin: center top;
     transform-origin: center top;
     -webkit-transform: scale(1, 1);

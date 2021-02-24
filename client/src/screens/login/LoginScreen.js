@@ -25,8 +25,11 @@ const LoginScreen = () => {
           </Form.Group>
 
           <SubmitBtn type='submit'>Login</SubmitBtn>
-          <p>
-            Don't have an account? <Link to='/register'>Sign up</Link>
+          <p className='mt-2'>
+            Don't have an account?{' '}
+            <Link to='/register' className='link-to-register'>
+              Sign up
+            </Link>
           </p>
         </Form>
       </div>

@@ -41,8 +41,11 @@ const RegisterScreen = () => {
           </Form.Group>
 
           <SubmitBtn type='submit'>Register</SubmitBtn>
-          <p>
-            Have an account? <Link to='/login'>Login</Link>
+          <p className='mt-2'>
+            Have an account already?{' '}
+            <Link to='/login' className='link-to-login'>
+              Login
+            </Link>
           </p>
         </Form>
       </div>
