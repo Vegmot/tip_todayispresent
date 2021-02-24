@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Card } from 'react-bootstrap';
 
 const GFeedScreen = () => {
   const [posts, setPosts] = useState([]);
@@ -19,49 +20,42 @@ const GFeedScreen = () => {
   return (
     <>
       <div>
-        <header>Posts for G-Feed</header>
-
         <section>
-          {posts.map(post => (
-            <div
-              key={post.id}
-              style={{
-                border: '1px solid #000',
-                margin: '5px',
-                padding: '5px',
-              }}
-            >
-              <img
-                src={post.main_image}
-                alt={post.to}
-                style={{ width: '100px' }}
-              />
+          {posts.map(post => {
+            return (
+              <Card className='text-center'>
+                <Card.Header className='post-sender'>
+                  <img
+                    src={post.sub_image}
+                    alt={post.from}
+                    className='main-sub-image'
+                  />
+                  <h5>{post.from}</h5>
+                </Card.Header>
 
-              <div>
-                <img
-                  src={post.sub_image}
-                  alt={post.to}
-                  style={{ width: '20px' }}
-                />
+                <Card.Body>
+                  <img
+                    src={post.main_image}
+                    alt={post.to}
+                    className='main-main-image'
+                  />
+                </Card.Body>
 
-                <h5
-                  style={{
-                    display: 'inline',
-                    marginLeft: '5px',
-                    paddingTop: '2px',
-                  }}
-                >
-                  {post.from} ({post.owner_id}) sent a Gesture to {post.to}
-                </h5>
-              </div>
+                <Card.Footer className='post-message'>
+                  <p className='post-text'>
+                    <span className='post-users'>{post.from}</span> sent a
+                    Gesture to <span className='post-users'>{post.to}!</span>
+                  </p>
 
-              <p>{post.message}</p>
-              <small style={{ display: 'block' }}>
-                Posted on {post.createdAt}
-              </small>
-              <small style={{ display: 'block' }}>Post ID: {post.id}</small>
-            </div>
-          ))}
+                  <h5>
+                    <i class='far fa-comment'></i> {post.message}
+                  </h5>
+                  <small>Posted on {post.createdAt}</small>
+                </Card.Footer>
+              </Card>
+            );
+          })}
+          <button className='load-more-btn'>Load More...</button>
         </section>
       </div>
     </>

@@ -75,6 +75,14 @@ const Header = () => {
               className='navbar-item'
               onClick={e => tapToCloseMenuHandler(e)}
             >
+              <Link to='/chat'>Chat</Link>
+            </li>
+
+            <li
+              id='navbar-item'
+              className='navbar-item'
+              onClick={e => tapToCloseMenuHandler(e)}
+            >
               <Link to='/about'>About</Link>
             </li>
 

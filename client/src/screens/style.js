@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const ContactSubmitBtn = styled.button`
+export const SubmitBtn = styled.button`
   background-color: #350b40;
   color: #f6f6f6;
   font-size: 1.2rem;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Row, Col, Form } from 'react-bootstrap';
-import { ContactSubmitBtn } from '../style';
+import { SubmitBtn } from '../style';
 
 const ContactScreen = () => {
   const [firstName, setFirstName] = useState('');
@@ -22,7 +22,7 @@ const ContactScreen = () => {
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero
               quaerat rem nemo quasi tenetur odio iusto.
             </p>
-            <ContactSubmitBtn smaller>Details</ContactSubmitBtn>
+            <SubmitBtn smaller>Details</SubmitBtn>
           </div>
 
           <div className='contact-form-account'>
@@ -31,7 +31,7 @@ const ContactScreen = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, autem
               cum? Doloremque dolores eaque vel excepturi?
             </p>
-            <ContactSubmitBtn smaller>Details</ContactSubmitBtn>
+            <SubmitBtn smaller>Details</SubmitBtn>
           </div>
         </Col>
 
@@ -81,7 +81,7 @@ const ContactScreen = () => {
               ></Form.Control>
             </Form.Group>
 
-            <ContactSubmitBtn>Submit</ContactSubmitBtn>
+            <SubmitBtn>Submit</SubmitBtn>
           </Form>
         </Col>
       </Row>

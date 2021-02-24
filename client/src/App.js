@@ -6,8 +6,10 @@ import HomeScreen from './screens/home/HomeScreen';
 import LoginScreen from './screens/login/LoginScreen';
 import RegisterScreen from './screens/register/RegisterScreen';
 import GFeedScreen from './screens/gfeed/GFeedScreen';
+import ChatScreen from './screens/chat/ChatScreen';
 import AboutScreen from './screens/about/AboutScreen';
 import ContactScreen from './screens/contact/ContactScreen';
+import PresentsScreen from './screens/presents/PresentsScreen';
 
 import './bootstrap.min.css';
 import './App.css';
@@ -23,6 +25,8 @@ const App = () => {
             <Route exact path='/login' component={LoginScreen} />
             <Route exact path='/register' component={RegisterScreen} />
             <Route exact path='/gfeed' component={GFeedScreen} />
+            <Route exact path='/presents' component={PresentsScreen} />
+            <Route exact path='/chat' component={ChatScreen} />
             <Route exact path='/about' component={AboutScreen} />
             <Route exact path='/contact' component={ContactScreen} />
           </Switch>
